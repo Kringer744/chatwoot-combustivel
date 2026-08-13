@@ -87,7 +87,9 @@ RUN if [ "$RAILS_ENV" = "production" ]; then \
   fi
 
 # Generate .git_sha file with current commit hash
-RUN git rev-parse HEAD > /app/.git_sha
+# EasyPanel checks out the code without .git, so fall back to the GIT_SHA build arg
+ARG GIT_SHA=unknown
+RUN git rev-parse HEAD > /app/.git_sha 2>/dev/null || echo "${GIT_SHA}" > /app/.git_sha
 
 # Remove unnecessary files
 RUN rm -rf /gems/ruby/3.4.0/cache/*.gem \
