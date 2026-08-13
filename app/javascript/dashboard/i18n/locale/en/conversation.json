@@ -394,6 +394,21 @@
       "UNMUTE": "Unmute mic",
       "VIEW_CHAT_HISTORY": "View chat history",
       "GO_TO_CONVERSATION": "Go to conversation thread"
+    },
+    "SALE_CHECK": {
+      "TITLE": "Did you close the sale?",
+      "DESCRIPTION": "Before resolving, register the outcome of this conversation.",
+      "CLOSED": "Closed the sale",
+      "LOST": "Didn't close",
+      "HOTEL_LABEL": "Which hotel closed the sale?",
+      "HOTEL_PLACEHOLDER": "Select the hotel",
+      "NO_HOTELS": "No hotel assigned to you. Ask an admin to assign you to a hotel.",
+      "VALUE_LABEL": "Sale value (R$)",
+      "VALUE_PLACEHOLDER": "e.g. 1500.00",
+      "CONFIRM": "Register and resolve",
+      "CANCEL": "Cancel",
+      "SKIP": "Resolve without registering",
+      "ERROR": "Could not register the sale. Try again."
     }
   },
   "EMAIL_TRANSCRIPT": {

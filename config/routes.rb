@@ -373,11 +373,27 @@ Rails.application.routes.draw do
           end
 
           resources :webhooks, only: [:index, :create, :update, :destroy]
+          resources :hotels, only: [:index, :create, :update, :destroy] do
+            member do
+              post :assign_agents
+            end
+          end
+          resources :sales, only: [:create] do
+            collection do
+              get :summary
+            end
+          end
           namespace :integrations do
             resources :apps, only: [:index, :show]
             resources :hooks, only: [:show, :create, :update, :destroy] do
               member do
                 post :process_event
+              end
+            end
+            resource :uazapi, controller: 'uazapi', only: [:create] do
+              collection do
+                get :status
+                post :disconnect
               end
             end
             resource :slack, only: [:create, :update, :destroy], controller: 'slack' do

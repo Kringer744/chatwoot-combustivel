@@ -363,6 +363,21 @@
       "UNMUTE": "Desilenciar microfone",
       "VIEW_CHAT_HISTORY": "Ver histórico da conversa",
       "GO_TO_CONVERSATION": "Ir para a conversa"
+    },
+    "SALE_CHECK": {
+      "TITLE": "Fechou a venda?",
+      "DESCRIPTION": "Antes de resolver, registre o resultado desta conversa.",
+      "CLOSED": "Fechou",
+      "LOST": "Não fechou",
+      "HOTEL_LABEL": "Qual hotel fechou a venda?",
+      "HOTEL_PLACEHOLDER": "Selecione o hotel",
+      "NO_HOTELS": "Nenhum hotel atribuído a você. Peça a um administrador para te atribuir a um hotel.",
+      "VALUE_LABEL": "Valor da venda (R$)",
+      "VALUE_PLACEHOLDER": "ex: 1500,00",
+      "CONFIRM": "Registrar e resolver",
+      "CANCEL": "Cancelar",
+      "SKIP": "Resolver sem registrar",
+      "ERROR": "Não foi possível registrar a venda. Tente de novo."
     }
   },
   "EMAIL_TRANSCRIPT": {

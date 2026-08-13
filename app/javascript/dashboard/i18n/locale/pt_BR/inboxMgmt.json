@@ -520,6 +520,10 @@
           "VOICE": {
             "TITLE": "Voz",
             "DESCRIPTION": "Integre com o Twilio Voice"
+          },
+          "UAZAPI": {
+            "TITLE": "WhatsApp QR",
+            "DESCRIPTION": "Conecte um número de WhatsApp escaneando o QR code (UAZAPI)."
           }
         }
       },
@@ -554,6 +558,39 @@
         "SIGN_IN": "Entrar com o Google",
         "EMAIL_PLACEHOLDER": "Digite o endereço de e-mail",
         "ERROR_MESSAGE": "Houve um erro ao conectar com o Google, por favor, tente novamente"
+      },
+      "UAZAPI": {
+        "TITLE": "WhatsApp QR Code",
+        "DESC": "Conecte um número de WhatsApp escaneando o QR code, direto pela plataforma (UAZAPI).",
+        "SERVER_URL": {
+          "LABEL": "URL do servidor UAZAPI",
+          "PLACEHOLDER": "https://seu-servidor.uazapi.com",
+          "ERROR": "Informe uma URL válida começando com http"
+        },
+        "ADMIN_TOKEN": {
+          "LABEL": "Admin token",
+          "PLACEHOLDER": "Token de administrador da UAZAPI",
+          "ERROR": "O admin token é obrigatório"
+        },
+        "INSTANCE_NAME": {
+          "LABEL": "Nome da instância",
+          "PLACEHOLDER": "ex: equipe-vendas",
+          "ERROR": "O nome da instância é obrigatório"
+        },
+        "INBOX_NAME": {
+          "LABEL": "Nome da caixa de entrada (opcional)",
+          "PLACEHOLDER": "ex: WhatsApp Vendas"
+        },
+        "SUBMIT_BUTTON": "Gerar QR code",
+        "ERROR_MESSAGE": "Não foi possível criar a instância. Confira a URL do servidor e o admin token.",
+        "QR": {
+          "TITLE": "Escaneie o QR code",
+          "HELP": "Abra o WhatsApp no celular, vá em Configurações > Aparelhos conectados > Conectar um aparelho e escaneie o código abaixo.",
+          "WAITING": "Gerando QR code...",
+          "PAIRCODE": "Ou use o código de pareamento:",
+          "POLLING": "Aguardando conexão...",
+          "CONNECTED": "WhatsApp conectado com sucesso!"
+        }
       }
     },
     "DETAILS": {

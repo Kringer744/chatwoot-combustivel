@@ -24,6 +24,12 @@ const channelList = computed(() => {
   const { apiChannelName } = globalConfig.value;
   const channels = [
     {
+      key: 'uazapi',
+      title: t('INBOX_MGMT.ADD.AUTH.CHANNEL.UAZAPI.TITLE'),
+      description: t('INBOX_MGMT.ADD.AUTH.CHANNEL.UAZAPI.DESCRIPTION'),
+      icon: 'i-woot-whatsapp',
+    },
+    {
       key: 'website',
       title: t('INBOX_MGMT.ADD.AUTH.CHANNEL.WEBSITE.TITLE'),
       description: t('INBOX_MGMT.ADD.AUTH.CHANNEL.WEBSITE.DESCRIPTION'),

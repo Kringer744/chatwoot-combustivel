@@ -415,6 +415,13 @@ const menuItems = computed(() => {
           to: accountScopedRoute('conversation_unattended'),
         },
         {
+          name: 'Groups',
+          activeOn: ['conversation_through_groups'],
+          label: t('SIDEBAR.GROUP_CONVERSATIONS'),
+          icon: 'i-lucide-users-round',
+          to: accountScopedRoute('conversation_groups'),
+        },
+        {
           name: 'Folders',
           label: t('SIDEBAR.CUSTOM_VIEWS_FOLDER'),
           icon: 'i-lucide-folder',
@@ -684,6 +691,11 @@ const menuItems = computed(() => {
           label: t('SIDEBAR.REPORTS_CONVERSATION'),
           to: accountScopedRoute('conversation_reports'),
         },
+        {
+          name: 'Report Sales',
+          label: t('SIDEBAR.REPORTS_SALES'),
+          to: accountScopedRoute('sales_reports'),
+        },
         ...reportRoutes.value,
         {
           name: 'Reports CSAT',
@@ -793,6 +805,13 @@ const menuItems = computed(() => {
           label: t('SIDEBAR.AGENTS'),
           icon: 'i-lucide-square-user',
           to: accountScopedRoute('agent_list'),
+        },
+        {
+          name: 'Settings Hotels',
+          label: t('SIDEBAR.HOTELS'),
+          icon: 'i-lucide-building-2',
+          activeOn: ['hotels_list'],
+          to: accountScopedRoute('hotels_list'),
         },
         {
           name: 'Settings Teams',

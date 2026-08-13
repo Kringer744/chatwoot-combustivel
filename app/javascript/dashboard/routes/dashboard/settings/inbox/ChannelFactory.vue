@@ -13,8 +13,10 @@ import Telegram from './channels/Telegram.vue';
 import Instagram from './channels/Instagram.vue';
 import Tiktok from './channels/Tiktok.vue';
 import Voice from './channels/Voice.vue';
+import Uazapi from './channels/Uazapi.vue';
 
 const channelViewList = {
+  uazapi: Uazapi,
   facebook: Facebook,
   website: Website,
   twitter: Twitter,

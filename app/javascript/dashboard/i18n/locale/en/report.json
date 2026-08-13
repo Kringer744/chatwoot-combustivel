@@ -665,5 +665,36 @@
     "AVG_REPLY_TIME": "Avg. Customer Waiting Time",
     "RESOLUTION_COUNT": "Resolution Count",
     "CONVERSATIONS": "No. of conversations"
+  },
+  "SALES_REPORTS": {
+    "HEADER": "Sales",
+    "DESCRIPTION": "Closed and lost deals registered by consultants when resolving conversations.",
+    "RANGE_DAYS": "{days} days",
+    "FETCH_ERROR": "Could not load the sales summary",
+    "EMPTY": "No data in this period",
+    "TILES": {
+      "CLOSED": "Closed",
+      "LOST": "Not closed",
+      "CONVERSION": "Conversion rate",
+      "TOTAL_VALUE": "Total value"
+    },
+    "BY_HOTEL": {
+      "TITLE": "Sales by hotel",
+      "SALES": "{count} sales"
+    },
+    "BY_AGENT": {
+      "TITLE": "Sales by consultant",
+      "AGENT": "Consultant",
+      "COUNT": "Sales",
+      "VALUE": "Value"
+    },
+    "RECENT": {
+      "TITLE": "Recent sales",
+      "DATE": "Date",
+      "CONTACT": "Contact",
+      "HOTEL": "Hotel",
+      "AGENT": "Consultant",
+      "VALUE": "Value"
+    }
   }
 }

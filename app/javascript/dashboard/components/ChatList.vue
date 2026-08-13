@@ -290,6 +290,9 @@ const pageTitle = computed(() => {
   if (props.conversationType === wootConstants.CONVERSATION_TYPE.UNATTENDED) {
     return t('CHAT_LIST.UNATTENDED_HEADING');
   }
+  if (props.conversationType === wootConstants.CONVERSATION_TYPE.GROUP) {
+    return t('CHAT_LIST.GROUP_HEADING');
+  }
   if (hasActiveFolders.value) {
     return activeFolder.value.name;
   }

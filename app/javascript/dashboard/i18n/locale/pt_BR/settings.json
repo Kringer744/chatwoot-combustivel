@@ -318,6 +318,7 @@
     "MENTIONED_CONVERSATIONS": "Menções",
     "PARTICIPATING_CONVERSATIONS": "Participantes",
     "UNATTENDED_CONVERSATIONS": "Não atendidas",
+    "GROUP_CONVERSATIONS": "Grupos",
     "REPORTS": "Relatórios",
     "SETTINGS": "Configurações",
     "CONTACTS": "Contatos",
@@ -414,7 +415,9 @@
     "DOCS": "Ler documentos",
     "SECURITY": "Segurança",
     "CAPTAIN_AI": "Capitão",
-    "CONVERSATION_WORKFLOW": "Fluxo de Conversa"
+    "CONVERSATION_WORKFLOW": "Fluxo de Conversa",
+    "REPORTS_SALES": "Vendas",
+    "HOTELS": "Hotéis"
   },
   "DATA_IMPORTS": {
     "HEADER": "Dados",
@@ -1080,5 +1083,29 @@
       "CONFIRM_BUTTON_LABEL": "Excluir",
       "CANCEL_BUTTON_LABEL": "Cancelar"
     }
+  },
+  "HOTELS_SETTINGS": {
+    "HEADER": "Hotéis",
+    "DESCRIPTION": "Cadastre os hotéis e atribua os consultores. Ao resolver com venda fechada, cada consultor vê apenas os hotéis atribuídos a ele.",
+    "ADD": {
+      "PLACEHOLDER": "Nome do hotel",
+      "BUTTON": "Adicionar hotel",
+      "SUCCESS": "Hotel adicionado",
+      "ERROR": "Não foi possível adicionar o hotel"
+    },
+    "AGENTS_LABEL": "Consultores atribuídos (clique para alternar)",
+    "ACTIVE": "Ativo",
+    "INACTIVE": "Inativo",
+    "ACTIVATE": "Ativar",
+    "DEACTIVATE": "Desativar",
+    "DELETE": {
+      "BUTTON": "Remover",
+      "CONFIRM": "Confirmar remoção?",
+      "SUCCESS": "Hotel removido",
+      "ERROR": "Não foi possível remover o hotel"
+    },
+    "EMPTY": "Nenhum hotel cadastrado ainda. Adicione o primeiro acima.",
+    "FETCH_ERROR": "Não foi possível carregar os hotéis",
+    "UPDATE_ERROR": "Não foi possível atualizar o hotel"
   }
 }

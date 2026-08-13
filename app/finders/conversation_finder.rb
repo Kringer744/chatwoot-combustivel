@@ -146,6 +146,8 @@ class ConversationFinder
       @conversations = @conversations.where(id: participant_conversation_ids)
     when 'unattended'
       @conversations = @conversations.unattended
+    when 'group'
+      @conversations = @conversations.joins(:contact).where('contacts.identifier LIKE ?', '%@g.us')
     end
     @conversations
   end

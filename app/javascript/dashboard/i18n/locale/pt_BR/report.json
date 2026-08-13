@@ -665,5 +665,36 @@
     "AVG_REPLY_TIME": "Tempo Médio de Espera do Cliente",
     "RESOLUTION_COUNT": "Contagem de Resolução",
     "CONVERSATIONS": "Nº de Conversas"
+  },
+  "SALES_REPORTS": {
+    "HEADER": "Vendas",
+    "DESCRIPTION": "Vendas fechadas e perdidas registradas pelos consultores ao resolver as conversas.",
+    "RANGE_DAYS": "{days} dias",
+    "FETCH_ERROR": "Não foi possível carregar o resumo de vendas",
+    "EMPTY": "Sem dados neste período",
+    "TILES": {
+      "CLOSED": "Fechou",
+      "LOST": "Não fechou",
+      "CONVERSION": "Taxa de conversão",
+      "TOTAL_VALUE": "Valor total"
+    },
+    "BY_HOTEL": {
+      "TITLE": "Vendas por hotel",
+      "SALES": "{count} vendas"
+    },
+    "BY_AGENT": {
+      "TITLE": "Vendas por consultor",
+      "AGENT": "Consultor",
+      "COUNT": "Vendas",
+      "VALUE": "Valor"
+    },
+    "RECENT": {
+      "TITLE": "Vendas recentes",
+      "DATE": "Data",
+      "CONTACT": "Contato",
+      "HOTEL": "Hotel",
+      "AGENT": "Consultor",
+      "VALUE": "Valor"
+    }
   }
 }

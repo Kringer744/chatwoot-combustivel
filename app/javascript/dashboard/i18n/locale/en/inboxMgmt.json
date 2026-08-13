@@ -520,6 +520,10 @@
           "VOICE": {
             "TITLE": "Voice",
             "DESCRIPTION": "Integrate with Twilio Voice"
+          },
+          "UAZAPI": {
+            "TITLE": "WhatsApp QR",
+            "DESCRIPTION": "Connect a WhatsApp number by scanning a QR code (UAZAPI)."
           }
         }
       },
@@ -554,6 +558,39 @@
         "SIGN_IN": "Sign in with Google",
         "EMAIL_PLACEHOLDER": "Enter email address",
         "ERROR_MESSAGE": "There was an error connecting to Google, please try again"
+      },
+      "UAZAPI": {
+        "TITLE": "WhatsApp QR Code",
+        "DESC": "Connect a WhatsApp number by scanning a QR code, directly from the platform (UAZAPI).",
+        "SERVER_URL": {
+          "LABEL": "UAZAPI server URL",
+          "PLACEHOLDER": "https://your-server.uazapi.com",
+          "ERROR": "Enter a valid URL starting with http"
+        },
+        "ADMIN_TOKEN": {
+          "LABEL": "Admin token",
+          "PLACEHOLDER": "UAZAPI admin token",
+          "ERROR": "Admin token is required"
+        },
+        "INSTANCE_NAME": {
+          "LABEL": "Instance name",
+          "PLACEHOLDER": "e.g. sales-team",
+          "ERROR": "Instance name is required"
+        },
+        "INBOX_NAME": {
+          "LABEL": "Inbox name (optional)",
+          "PLACEHOLDER": "e.g. WhatsApp Sales"
+        },
+        "SUBMIT_BUTTON": "Generate QR code",
+        "ERROR_MESSAGE": "Could not create the instance. Check the server URL and admin token.",
+        "QR": {
+          "TITLE": "Scan the QR code",
+          "HELP": "Open WhatsApp on your phone, go to Settings > Linked devices > Link a device and scan the code below.",
+          "WAITING": "Generating QR code...",
+          "PAIRCODE": "Or use the pairing code:",
+          "POLLING": "Waiting for connection...",
+          "CONNECTED": "WhatsApp connected successfully!"
+        }
       }
     },
     "DETAILS": {

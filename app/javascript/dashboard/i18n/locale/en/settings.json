@@ -318,6 +318,7 @@
     "MENTIONED_CONVERSATIONS": "Mentions",
     "PARTICIPATING_CONVERSATIONS": "Participating",
     "UNATTENDED_CONVERSATIONS": "Unattended",
+    "GROUP_CONVERSATIONS": "Groups",
     "REPORTS": "Reports",
     "SETTINGS": "Settings",
     "CONTACTS": "Contacts",
@@ -414,7 +415,9 @@
     "DOCS": "Read docs",
     "SECURITY": "Security",
     "CAPTAIN_AI": "Captain",
-    "CONVERSATION_WORKFLOW": "Conversation Workflow"
+    "CONVERSATION_WORKFLOW": "Conversation Workflow",
+    "REPORTS_SALES": "Sales",
+    "HOTELS": "Hotels"
   },
   "DATA_IMPORTS": {
     "HEADER": "Data",
@@ -1080,5 +1083,29 @@
       "CONFIRM_BUTTON_LABEL": "Delete",
       "CANCEL_BUTTON_LABEL": "Cancel"
     }
+  },
+  "HOTELS_SETTINGS": {
+    "HEADER": "Hotels",
+    "DESCRIPTION": "Register the hotels and assign consultants. When resolving with a closed sale, each consultant only sees their assigned hotels.",
+    "ADD": {
+      "PLACEHOLDER": "Hotel name",
+      "BUTTON": "Add hotel",
+      "SUCCESS": "Hotel added",
+      "ERROR": "Could not add the hotel"
+    },
+    "AGENTS_LABEL": "Assigned consultants (click to toggle)",
+    "ACTIVE": "Active",
+    "INACTIVE": "Inactive",
+    "ACTIVATE": "Activate",
+    "DEACTIVATE": "Deactivate",
+    "DELETE": {
+      "BUTTON": "Remove",
+      "CONFIRM": "Confirm removal?",
+      "SUCCESS": "Hotel removed",
+      "ERROR": "Could not remove the hotel"
+    },
+    "EMPTY": "No hotel registered yet. Add the first one above.",
+    "FETCH_ERROR": "Could not load the hotels",
+    "UPDATE_ERROR": "Could not update the hotel"
   }
 }

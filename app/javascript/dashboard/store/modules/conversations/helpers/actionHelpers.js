@@ -38,6 +38,11 @@ export const isOnParticipatingView = ({ route: { name: routeName } }) => {
   return PARTICIPATING_ROUTES.includes(routeName);
 };
 
+export const isOnGroupsView = ({ route: { name: routeName } }) => {
+  const GROUP_ROUTES = ['conversation_groups', 'conversation_through_groups'];
+  return GROUP_ROUTES.includes(routeName);
+};
+
 export const isOnFoldersView = ({ route: { name: routeName } }) => {
   const FOLDER_ROUTES = [
     'folder_conversations',

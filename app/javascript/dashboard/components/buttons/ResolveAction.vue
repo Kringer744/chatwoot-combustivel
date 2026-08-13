@@ -19,6 +19,8 @@ import {
 import ButtonGroup from 'dashboard/components-next/buttonGroup/ButtonGroup.vue';
 import Button from 'dashboard/components-next/button/Button.vue';
 import ConversationResolveAttributesModal from 'dashboard/components-next/ConversationWorkflow/ConversationResolveAttributesModal.vue';
+import SaleCheckModal from 'dashboard/components-next/ConversationWorkflow/SaleCheckModal.vue';
+import SalesAPI from 'dashboard/api/sales';
 
 const store = useStore();
 const getters = useStoreGetters();
@@ -28,6 +30,7 @@ const { checkMissingAttributes } = useConversationRequiredAttributes();
 const arrowDownButtonRef = ref(null);
 const isLoading = ref(false);
 const resolveAttributesModalRef = ref(null);
+const saleCheckModalRef = ref(null);
 
 const [showActionsDropdown, toggleDropdown] = useToggle();
 const closeDropdown = () => toggleDropdown(false);
@@ -117,7 +120,7 @@ const onCmdOpenConversation = () => {
   toggleStatus(wootConstants.STATUS_TYPE.OPEN);
 };
 
-const onCmdResolveConversation = () => {
+const continueResolve = () => {
   const currentCustomAttributes = currentChat.value.custom_attributes || {};
   const { hasMissing, missing } = checkMissingAttributes(
     currentCustomAttributes
@@ -136,6 +139,32 @@ const onCmdResolveConversation = () => {
   } else {
     toggleStatus(wootConstants.STATUS_TYPE.RESOLVED);
   }
+};
+
+// Antes de resolver, pergunta se a venda foi fechada (fluxo Combustível)
+const onCmdResolveConversation = () => {
+  saleCheckModalRef.value?.open({ id: currentChat.value.id });
+};
+
+const handleSaleSubmit = async ({ closed, value, hotelId }) => {
+  try {
+    await SalesAPI.create({
+      conversation_id: currentChat.value.id,
+      closed,
+      value,
+      hotel_id: hotelId,
+    });
+  } catch (error) {
+    useAlert(
+      error?.response?.data?.error || t('CONVERSATION.SALE_CHECK.ERROR')
+    );
+    return;
+  }
+  continueResolve();
+};
+
+const handleSaleSkip = () => {
+  continueResolve();
 };
 
 const keyboardEvents = {
@@ -258,6 +287,11 @@ useEmitter(CMD_RESOLVE_CONVERSATION, onCmdResolveConversation);
     <ConversationResolveAttributesModal
       ref="resolveAttributesModalRef"
       @submit="handleResolveWithAttributes"
+    />
+    <SaleCheckModal
+      ref="saleCheckModalRef"
+      @submit="handleSaleSubmit"
+      @skip="handleSaleSkip"
     />
   </div>
 </template>
