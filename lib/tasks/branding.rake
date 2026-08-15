@@ -32,5 +32,8 @@ namespace :branding do
       user.update!(type: 'SuperAdmin')
       puts "branding:superadmin #{user.email} promovido"
     end
+  rescue StandardError => e
+    # nunca derrubar o boot por causa do super admin; o erro fica no log
+    puts "branding:superadmin ERRO: #{e.message}"
   end
 end
