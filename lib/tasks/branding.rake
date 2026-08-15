@@ -13,14 +13,18 @@ namespace :branding do
     puts 'branding:sync ok'
   end
 
-  desc 'Promove um usuário a Super Admin (SUPERADMIN_EMAIL ou, sem env, o primeiro usuário)'
+  desc 'Garante o Super Admin: cria com SUPERADMIN_EMAIL/SUPERADMIN_PASSWORD ou promove usuário existente'
   task superadmin: :environment do
-    user = if ENV['SUPERADMIN_EMAIL'].present?
-             User.from_email(ENV['SUPERADMIN_EMAIL'])
-           elsif SuperAdmin.none?
-             User.order(:id).first
-           end
-    if user.nil?
+    email = ENV['SUPERADMIN_EMAIL']
+    password = ENV['SUPERADMIN_PASSWORD']
+    user = email.present? ? User.from_email(email) : (SuperAdmin.none? ? User.order(:id).first : nil)
+
+    if user.nil? && email.present? && password.present?
+      user = User.new(name: 'Super Admin', email: email, password: password, type: 'SuperAdmin')
+      user.skip_confirmation!
+      user.save!
+      puts "branding:superadmin #{email} criado"
+    elsif user.nil?
       puts 'branding:superadmin nada a fazer'
     elsif user.type == 'SuperAdmin'
       puts "branding:superadmin #{user.email} já é super admin"
