@@ -10,6 +10,10 @@ namespace :branding do
       record.save!
     end
     GlobalConfig.clear_cache
+
+    # conta criada com o nome padrao "Chatwoot" vira o nome da marca
+    brand = InstallationConfig.find_by(name: 'BRAND_NAME')&.value.presence || 'Combustível Digital'
+    Account.where(name: 'Chatwoot').update_all(name: brand)
     puts 'branding:sync ok'
   end
 
